@@ -117,6 +117,11 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   redirects: async () => [
     {
+      destination: '/zh-CN__0__light/chat',
+      permanent: true,
+      source: '/chat',
+    },
+    {
       destination: '/sitemap-index.xml',
       permanent: true,
       source: '/sitemap.xml',

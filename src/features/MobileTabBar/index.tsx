@@ -1,13 +1,12 @@
 import { Icon, MobileTabBar, type MobileTabBarProps } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
-import { Bot, MessageSquare, User } from 'lucide-react';
+import { MessageSquare, User } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { rgba } from 'polished';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { SidebarTabKey } from '@/store/global/initialState';
-import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
 const useStyles = createStyles(({ css, token }) => ({
   active: css`
@@ -29,7 +28,6 @@ export default memo<Props>(({ className, tabBarKey }) => {
   const openSettings = () => {
     router.push('/settings/llm');
   };
-  const { showMarket } = useServerConfigStore(featureFlagsSelectors);
 
   const items: MobileTabBarProps['items'] = useMemo(
     () =>
@@ -44,16 +42,6 @@ export default memo<Props>(({ className, tabBarKey }) => {
           },
           title: t('tab.chat'),
         },
-        showMarket && {
-          icon: (active: boolean) => (
-            <Icon className={active ? styles.active : undefined} icon={Bot} />
-          ),
-          key: SidebarTabKey.Discover,
-          onClick: () => {
-            router.push('/discover');
-          },
-          title: t('tab.discover'),
-        },
         {
           icon: (active: boolean) => (
             <Icon className={active ? styles.active : undefined} icon={User} />
@@ -62,7 +50,7 @@ export default memo<Props>(({ className, tabBarKey }) => {
           onClick: openSettings,
           title: t('tab.setting'),
         },
-      ].filter(Boolean) as MobileTabBarProps['items'],
+      ],
     [t],
   );
 
