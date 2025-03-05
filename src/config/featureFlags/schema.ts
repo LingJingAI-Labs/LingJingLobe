@@ -50,8 +50,8 @@ export const DEFAULT_FEATURE_FLAGS: IFeatureFlags = {
   webrtc_sync: false,
   pin_list: false,
 
-  language_model_settings: true,
-  provider_settings: true,
+  language_model_settings: false,
+  provider_settings: false,
 
   openai_api_key: true,
   openai_proxy_url: true,
@@ -59,22 +59,22 @@ export const DEFAULT_FEATURE_FLAGS: IFeatureFlags = {
   create_session: true,
   edit_agent: true,
 
-  plugins: true,
-  dalle: true,
+  plugins: false,
+  dalle: false,
+  speech_to_text: false,
 
   check_updates: true,
-  welcome_suggest: true,
+  welcome_suggest: false,
   token_counter: true,
 
-  knowledge_base: true,
+  knowledge_base: false,
   rag_eval: false,
 
   clerk_sign_up: true,
 
   cloud_promotion: false,
 
-  market: true,
-  speech_to_text: true,
+  market: false,
   changelog: true,
 
   // the flags below can only be used with commercial license
