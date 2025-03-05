@@ -7,8 +7,8 @@ import { AsyncLocalStorage } from '@/utils/localStorage';
 
 export enum SidebarTabKey {
   Chat = 'chat',
-  // Discover = 'discover',
-  // Files = 'files',
+  Discover = 'discover',
+  Files = 'files',
   Me = 'me',
   Setting = 'settings',
 }
@@ -97,7 +97,7 @@ export const INITIAL_STATUS = {
   showSessionPanel: false,
   showSystemRole: false,
   threadInputHeight: 200,
-  zenMode: true
+  zenMode: true,
 } satisfies SystemStatus;
 
 export const initialState: GlobalState = {
