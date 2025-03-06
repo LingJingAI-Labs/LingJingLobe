@@ -214,7 +214,7 @@ export default {
       title: '单次回复限制',
     },
     model: {
-      desc: '{{provider}} 模型',
+      desc: '灵境AI智能引擎 | 大模型+创作解决方案',
       title: '模型',
     },
     params: {
