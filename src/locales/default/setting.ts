@@ -297,8 +297,8 @@ export default {
     title: '语音服务',
     tts: '语音合成设置',
     ttsService: {
-      desc: '如使用 OpenAI 语音合成服务，需要保证 OpenAI 模型服务已开启',
-      title: '语音合成服务',
+      desc: '等待后续版本更新',
+      title: '语音合成服务暂未开放',
     },
     voice: {
       desc: '为当前助手挑选一个声音，不同 TTS 服务支持的声源不同',
