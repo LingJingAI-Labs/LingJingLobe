@@ -1,4 +1,4 @@
-import { ModelIcon } from '@lobehub/icons';
+import CustomModelIcon from '@/components/CustomModelIcon';
 import { ActionIcon } from '@lobehub/ui';
 import { Popover } from 'antd';
 import { createStyles } from 'antd-style';
@@ -90,7 +90,7 @@ const ModelSwitch = memo(() => {
           width={36}
         >
           <div className={styles.icon}>
-            <ModelIcon model={model} size={22} />
+            <CustomModelIcon model={model} size={22} />
           </div>
         </Center>
       </ModelSwitchPanel>

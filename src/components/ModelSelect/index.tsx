@@ -1,4 +1,5 @@
-import { IconAvatarProps, ModelIcon, ProviderIcon } from '@lobehub/icons';
+import { IconAvatarProps, ProviderIcon } from '@lobehub/icons';
+import CustomModelIcon from '@/components/CustomModelIcon';
 import { Avatar, Icon, Tooltip } from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStyles } from 'antd-style';
@@ -179,7 +180,7 @@ export const ModelItemRender = memo<ModelItemRenderProps>(({ showInfoTag = true,
   return (
     <Flexbox align={'center'} gap={32} horizontal justify={'space-between'}>
       <Flexbox align={'center'} gap={8} horizontal>
-        <ModelIcon model={model.id} size={20} />
+        <CustomModelIcon model={model.id} size={20} />
         <Typography.Paragraph ellipsis={false} style={{ marginBottom: 0 }}>
           {model.displayName || model.id}
         </Typography.Paragraph>
