@@ -21,6 +21,7 @@ import { ModelAbilities } from '@/types/aiModel';
 import { AiProviderSourceType } from '@/types/aiProvider';
 import { ChatModelCard } from '@/types/llm';
 import { formatTokenNumber } from '@/utils/format';
+import { LingJingLogoList } from '@/components/LingJingLogo';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   custom: css`
@@ -198,20 +199,18 @@ interface ProviderItemRenderProps {
   source?: AiProviderSourceType;
 }
 
-export const ProviderItemRender = memo<ProviderItemRenderProps>(
-  ({ provider, name, source, logo }) => {
-    return (
-      <Flexbox align={'center'} gap={4} horizontal>
-        {source === 'custom' && !!logo ? (
-          <Avatar avatar={logo} size={20} style={{ filter: 'grayscale(1)' }} title={name} />
-        ) : (
-          <ProviderIcon provider={provider} size={20} type={'mono'} />
-        )}
-        <span>LingJingAI+</span>
-      </Flexbox>
-    );
-  },
-);
+export const ProviderItemRender = memo<ProviderItemRenderProps>(({ provider, name, source, logo }) => {
+  return (
+    <Flexbox align={'center'} gap={4} horizontal>
+      {source === 'custom' && !!logo ? (
+        <Avatar avatar={logo} size={20} style={{ filter: 'grayscale(1)' }} title={name} />
+      ) : (
+        <LingJingLogoList size={20} />
+      )}
+      <span>｜ LingJingAI+</span>
+    </Flexbox>
+  );
+});
 
 interface LabelRendererProps {
   Icon: FC<IconAvatarProps>;
