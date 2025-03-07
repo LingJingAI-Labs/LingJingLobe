@@ -207,7 +207,7 @@ export const ProviderItemRender = memo<ProviderItemRenderProps>(
         ) : (
           <ProviderIcon provider={provider} size={20} type={'mono'} />
         )}
-        {name}
+        <span>LingJingAI+</span>
       </Flexbox>
     );
   },
