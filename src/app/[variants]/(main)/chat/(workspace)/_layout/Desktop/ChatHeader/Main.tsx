@@ -17,7 +17,7 @@ import { systemStatusSelectors } from '@/store/global/selectors';
 import { useSessionStore } from '@/store/session';
 import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selectors';
 
-import Tags from './Tags';
+// import Tags from './Tags';
 
 const Main = memo(() => {
   const { t } = useTranslation('chat');

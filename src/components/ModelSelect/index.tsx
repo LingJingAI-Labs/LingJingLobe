@@ -1,4 +1,4 @@
-import { IconAvatarProps, ProviderIcon } from '@lobehub/icons';
+import { IconAvatarProps } from '@lobehub/icons';
 import CustomModelIcon from '@/components/CustomModelIcon';
 import { Avatar, Icon, Tooltip } from '@lobehub/ui';
 import { Typography } from 'antd';
@@ -199,7 +199,7 @@ interface ProviderItemRenderProps {
   source?: AiProviderSourceType;
 }
 
-export const ProviderItemRender = memo<ProviderItemRenderProps>(({ provider, name, source, logo }) => {
+export const ProviderItemRender = memo<ProviderItemRenderProps>(({ name, source, logo }) => {
   return (
     <Flexbox align={'center'} gap={4} horizontal>
       {source === 'custom' && !!logo ? (

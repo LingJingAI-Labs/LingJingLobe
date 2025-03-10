@@ -3,7 +3,8 @@
 import { Icon } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { MessageSquareHeart } from 'lucide-react';
-import Link from 'next/link';
+// 移除未使用的导入
+// import Link from 'next/link';
 import { PropsWithChildren, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';

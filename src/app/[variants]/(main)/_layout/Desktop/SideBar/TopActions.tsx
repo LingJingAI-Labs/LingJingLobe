@@ -1,5 +1,6 @@
 import { ActionIcon } from '@lobehub/ui';
-import { FolderClosed, MessageSquare } from 'lucide-react';
+// import { FolderClosed, MessageSquare } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -17,7 +18,7 @@ export interface TopActionProps {
 const TopActions = memo<TopActionProps>(({ tab, isPinned }) => {
   const { t } = useTranslation('common');
   const switchBackToChat = useGlobalStore((s) => s.switchBackToChat);
-  const { enableKnowledgeBase } = useServerConfigStore(featureFlagsSelectors);
+  // const { enableKnowledgeBase } = useServerConfigStore(featureFlagsSelectors);
 
   return (
     <>

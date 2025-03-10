@@ -11,7 +11,8 @@ import { agentSelectors } from '@/store/agent/selectors';
 import { useSessionStore } from '@/store/session';
 import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selectors';
 
-import pkg from '../../../../package.json';
+// 移除未使用的导入
+// import pkg from '../../../../package.json';
 import { useContainerStyles } from '../style';
 import ChatList from './ChatList';
 import { useStyles } from './style';

@@ -2,7 +2,8 @@
 
 import { VoiceList } from '@lobehub/tts';
 import { Form, ItemGroup } from '@lobehub/ui';
-import { Select, Switch } from 'antd';
+// 移除未使用的导入
+// import { Select, Switch } from 'antd';
 import { debounce } from 'lodash-es';
 import { Mic } from 'lucide-react';
 import { memo, useMemo } from 'react';
@@ -14,11 +15,13 @@ import { globalGeneralSelectors } from '@/store/global/selectors';
 
 import { useStore } from '../store';
 import { useAgentSyncSettings } from '../useSyncAgemtSettings';
-import SelectWithTTSPreview from './SelectWithTTSPreview';
-import { ttsOptions } from './options';
+// 移除未使用的导入
+// import SelectWithTTSPreview from './SelectWithTTSPreview';
+// import { ttsOptions } from './options';
 
 const TTS_SETTING_KEY = 'tts';
-const { openaiVoiceOptions, localeOptions } = VoiceList;
+// 添加下划线前缀标记未使用的变量
+const { openaiVoiceOptions } = VoiceList;
 
 const AgentTTS = memo(() => {
   const { t } = useTranslation('setting');
@@ -27,7 +30,7 @@ const AgentTTS = memo(() => {
     const locale = globalGeneralSelectors.currentLanguage(s);
     return (all?: boolean) => new VoiceList(all ? undefined : locale);
   });
-  const [showAllLocaleVoice, ttsService, updateConfig] = useStore((s) => [
+  const [showAllLocaleVoice, _ttsService, updateConfig] = useStore((s) => [
     s.config.tts?.showAllLocaleVoice,
     s.config.tts?.ttsService,
     s.setAgentConfig,
