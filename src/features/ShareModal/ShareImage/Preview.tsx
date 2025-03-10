@@ -20,8 +20,7 @@ import { FieldType } from './type';
 
 const Preview = memo<FieldType & { title?: string }>(
   ({ title, withSystemRole, withBackground, withFooter }) => {
-    const [model, plugins, systemRole] = useAgentStore((s) => [
-      agentSelectors.currentAgentModel(s),
+    const [plugins, systemRole] = useAgentStore((s) => [
       agentSelectors.currentAgentPlugins(s),
       agentSelectors.currentAgentSystemRole(s),
     ]);
@@ -50,7 +49,7 @@ const Preview = memo<FieldType & { title?: string }>(
                   desc={displayDesc}
                   tag={
                     <>
-                      <ModelTag model={model} />
+                      <ModelTag model="LingJingAI+" />
                       {plugins?.length > 0 && <PluginTag plugins={plugins} />}
                     </>
                   }
