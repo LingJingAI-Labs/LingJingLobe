@@ -62,7 +62,7 @@ const SessionItem = memo<SessionItemProps>(({ id }) => {
     () =>
       !showModel ? undefined : (
         <Flexbox gap={4} horizontal style={{ flexWrap: 'wrap' }}>
-          <ModelTag model={model} />
+          <ModelTag model="LingJingAI+" />
         </Flexbox>
       ),
     [showModel, model],
