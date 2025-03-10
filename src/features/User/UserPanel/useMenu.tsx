@@ -48,7 +48,7 @@ const NewVersionBadge = memo(
     showBadge,
     onClick,
   }: PropsWithChildren & { onClick?: () => void; showBadge?: boolean }) => {
-    const { t } = useTranslation('common');
+    // const { t } = useTranslation('common');
     if (!showBadge)
       return (
         <Flexbox flex={1} onClick={onClick}>
