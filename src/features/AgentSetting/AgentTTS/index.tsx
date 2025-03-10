@@ -30,9 +30,8 @@ const AgentTTS = memo(() => {
     const locale = globalGeneralSelectors.currentLanguage(s);
     return (all?: boolean) => new VoiceList(all ? undefined : locale);
   });
-  const [showAllLocaleVoice, _ttsService, updateConfig] = useStore((s) => [
+  const [showAllLocaleVoice, setAgentConfig] = useStore((s) => [
     s.config.tts?.showAllLocaleVoice,
-    s.config.tts?.ttsService,
     s.setAgentConfig,
   ]);
 
@@ -115,7 +114,7 @@ const AgentTTS = memo(() => {
       }}
       items={[tts]}
       itemsType={'group'}
-      onValuesChange={debounce(updateConfig, 100)}
+      onValuesChange={debounce((values) => setAgentConfig({ tts: values.tts }), 100)}
       variant={'pure'}
       {...FORM_STYLE}
     />

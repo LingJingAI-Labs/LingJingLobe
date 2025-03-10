@@ -4,12 +4,12 @@
 
 // import { isCustomBranding } from '@/const/version';
 
-import { useProviderList } from './ProviderList/providers';
+// import { useProviderList } from './ProviderList/providers';
 // import ProviderConfig from './components/ProviderConfig';
 // import Footer from './features/Footer';
 
 const Page = () => {
-  const list = useProviderList();
+  // const list = useProviderList();
 
   // 不渲染任何内容
   return null;

@@ -1,4 +1,2 @@
-import LingJingLogoList from './LingJingLogoList';
-
-export { LingJingLogoList };
-export default LingJingLogoList;
+export { default } from './LingJingLogoList';
+export { default as LingJingLogoList } from './LingJingLogoList';

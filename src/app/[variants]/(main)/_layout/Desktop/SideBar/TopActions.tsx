@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useGlobalStore } from '@/store/global';
 import { SidebarTabKey } from '@/store/global/initialState';
-import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
+// import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { useSessionStore } from '@/store/session';
 
 export interface TopActionProps {
@@ -21,24 +21,22 @@ const TopActions = memo<TopActionProps>(({ tab, isPinned }) => {
   // const { enableKnowledgeBase } = useServerConfigStore(featureFlagsSelectors);
 
   return (
-    <>
-      <Link
-        aria-label={t('tab.chat')}
-        href={'/chat'}
-        onClick={(e) => {
-          e.preventDefault();
-          switchBackToChat(useSessionStore.getState().activeId);
-        }}
-      >
-        <ActionIcon
-          active={tab === SidebarTabKey.Chat && !isPinned}
-          icon={MessageSquare}
-          placement={'right'}
-          size="large"
-          title={t('tab.chat')}
-        />
-      </Link>
-    </>
+    <Link
+      aria-label={t('tab.chat')}
+      href={'/chat'}
+      onClick={(e) => {
+        e.preventDefault();
+        switchBackToChat(useSessionStore.getState().activeId);
+      }}
+    >
+      <ActionIcon
+        active={tab === SidebarTabKey.Chat && !isPinned}
+        icon={MessageSquare}
+        placement={'right'}
+        size="large"
+        title={t('tab.chat')}
+      />
+    </Link>
   );
 });
 
