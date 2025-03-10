@@ -26,8 +26,8 @@ const Usage = memo<UsageProps>(({ model, metadata, provider }) => {
   return (
     <Flexbox align={'center'} className={styles.container} horizontal justify={'space-between'}>
       <Center gap={4} horizontal style={{ fontSize: 12 }}>
-        <ModelIcon model={model as string} type={'mono'} />
-        {model}
+        <ModelIcon/>
+        LingJingAI+
       </Center>
 
       {!!metadata.totalTokens && (
