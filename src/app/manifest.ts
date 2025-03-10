@@ -6,7 +6,7 @@ import { manifestModule } from '@/server/manifest';
 
 const manifest = (): MetadataRoute.Manifest | any => {
   return manifestModule.generate({
-    description: `${BRANDING_NAME} 灵境AI智能创作引擎 | 大模型+创作解决方案`,
+    description: `${BRANDING_NAME} 智能创作引擎 | 大模型+创作解决方案`,
     icons: [
       {
         purpose: 'any',
