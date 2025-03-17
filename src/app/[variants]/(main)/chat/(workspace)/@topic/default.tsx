@@ -7,7 +7,6 @@ import { RouteVariants } from '@/utils/server/routeVariants';
 import Desktop from './_layout/Desktop';
 import Mobile from './_layout/Mobile';
 import SkeletonList from './features/SkeletonList';
-import SystemRole from './features/SystemRole';
 
 const TopicContent = lazy(() => import('./features/TopicListContent'));
 
@@ -17,17 +16,12 @@ const Topic = async (props: DynamicLayoutProps) => {
   const Layout = isMobile ? Mobile : Desktop;
 
   return (
-    <>
-      {!isMobile && <SystemRole />}
-      <Layout>
-        <Suspense fallback={<SkeletonList />}>
-          <TopicContent />
-        </Suspense>
-      </Layout>
-    </>
+    <Layout>
+      <Suspense fallback={<SkeletonList />}>
+        <TopicContent />
+      </Suspense>
+    </Layout>
   );
 };
-
-Topic.displayName = 'ChatTopic';
 
 export default Topic;
