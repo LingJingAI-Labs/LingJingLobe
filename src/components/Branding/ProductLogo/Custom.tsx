@@ -1,7 +1,7 @@
+import React, { ReactNode, forwardRef, memo } from 'react';
 import type { IconType } from '@lobehub/icons';
 import type { LobeChatProps } from '@lobehub/ui/brand';
 import { createStyles, useTheme } from 'antd-style';
-import { ReactNode, forwardRef, memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import { BRANDING_NAME } from '@/const/branding';
@@ -35,7 +35,7 @@ const CustomTextLogo = memo<FlexboxProps & { size: number }>(({ size, style, ...
 
 const CustomImageLogo = memo<{ size: number; style?: React.CSSProperties }>(
   ({ size }) => {
-    return <LingJingLogoList color="currentColor" size={size} />;
+    return <LingJingLogoList size={size} />;
   },
 );
 
