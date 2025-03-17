@@ -1,11 +1,11 @@
 import type { IconType } from '@lobehub/icons';
 import type { LobeChatProps } from '@lobehub/ui/brand';
 import { createStyles, useTheme } from 'antd-style';
-import Image, { ImageProps } from 'next/image';
 import { ReactNode, forwardRef, memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
-import { BRANDING_LOGO_URL, BRANDING_NAME } from '@/const/branding';
+import { BRANDING_NAME } from '@/const/branding';
+import { LingJingLogoList } from '@/components/LingJingLogo';
 
 const useStyles = createStyles(({ css }) => {
   return {
@@ -33,18 +33,9 @@ const CustomTextLogo = memo<FlexboxProps & { size: number }>(({ size, style, ...
   );
 });
 
-const CustomImageLogo = memo<Omit<ImageProps, 'alt' | 'src'> & { size: number }>(
-  ({ size, ...rest }) => {
-    return (
-      <Image
-        alt={BRANDING_NAME}
-        height={size}
-        src={BRANDING_LOGO_URL}
-        unoptimized={true}
-        width={size}
-        {...rest}
-      />
-    );
+const CustomImageLogo = memo<{ size: number; style?: React.CSSProperties }>(
+  ({ size }) => {
+    return <LingJingLogoList color="currentColor" size={size} />;
   },
 );
 
