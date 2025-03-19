@@ -103,12 +103,12 @@ export default {
     QuotaLimitReached:
       '很抱歉，当前 Token 用量或请求次数已达该密钥的配额(quota)上限，请增加该密钥的配额或稍后再试',
     PermissionDenied: '很抱歉，你没有权限访问该服务，请检查你的密钥是否有访问权限',
-    InvalidProviderAPIKey: '{{provider}} API Key 不正确或为空，请检查 {{provider}} API Key 后重试',
-    ProviderBizError: '请求 {{provider}} 服务出错，请根据以下信息排查或重试',
+    InvalidProviderAPIKey: '灵境 API Key 不正确或为空，请检查 灵境 API Key 后重试',
+    ProviderBizError: '请求灵境服务出错，请根据以下信息排查或重试',
     /**
      * @deprecated
      */
-    NoOpenAIAPIKey: 'OpenAI API Key 不正确或为空，请添加自定义 OpenAI API Key',
+    NoOpenAIAPIKey: 'API Key 不正确或为空，请添加自定义 API Key',
 
     InvalidVertexCredentials: 'Vertex 鉴权未通过，请检查鉴权凭证后重试',
     InvalidBedrockCredentials: 'Bedrock 鉴权未通过，请检查 AccessKeyId/SecretAccessKey 后重试',
@@ -120,7 +120,7 @@ export default {
     OllamaServiceUnavailable:
       'Ollama 服务连接失败，请检查 Ollama 是否运行正常，或是否正确设置 Ollama 的跨域配置',
 
-    AgentRuntimeError: 'Lobe AI Runtime 执行出错，请根据以下信息排查或重试',
+    AgentRuntimeError: '灵境 AI Runtime 执行出错，请根据以下信息排查或重试',
 
     // cloud
     FreePlanLimit: '当前为免费用户，无法使用该功能，请升级到付费计划后继续使用',
@@ -140,10 +140,10 @@ export default {
     responseError: '服务请求失败，请检查配置或重试',
   },
   unlock: {
-    addProxyUrl: '添加 OpenAI 代理地址（可选）',
+    addProxyUrl: '添加 灵境 远程地址（可选）',
     apiKey: {
-      description: '输入你的 {{name}} API Key 即可开始会话',
-      title: '使用自定义 {{name}} API Key',
+      description: '输入你的 灵境 API Key 即可开始会话',
+      title: '使用自定义 灵境 API Key',
     },
     closeMessage: '关闭提示',
     confirm: '确认并重试',

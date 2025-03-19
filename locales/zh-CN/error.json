@@ -78,7 +78,7 @@
     "PluginSettingsInvalid": "该插件需要正确配置后才可以使用，请检查你的配置是否正确",
     "PluginServerError": "插件服务端请求返回出错，请检查根据下面的报错信息检查你的插件描述文件、插件配置或服务端实现",
     "PluginGatewayError": "很抱歉，插件网关出现错误，请检查插件网关配置是否正确",
-    "PluginOpenApiInitError": "很抱歉，OpenAPI 客户端初始化失败，请检查 OpenAPI 的配置信息是否正确",
+    "PluginOpenApiInitError": "灵境AI 客户端初始化失败，请检查 灵境AI 的配置信息是否正确",
     "PluginFailToTransformArguments": "很抱歉，插件调用参数解析失败，请尝试重新生成助手消息，或更换 Tools Calling 能力更强的 AI 模型后重试",
     "InvalidAccessCode": "密码不正确或为空，请输入正确的访问密码，或者添加自定义 API Key",
     "InvalidClerkUser": "很抱歉，你当前尚未登录，请先登录或注册账号后继续操作",
@@ -90,9 +90,9 @@
     "ExceededContextWindow": "当前请求内容超出模型可处理的长度，请减少内容量后重试",
     "QuotaLimitReached": "很抱歉，当前 Token 用量或请求次数已达该密钥的配额(quota)上限，请增加该密钥的配额或稍后再试",
     "PermissionDenied": "很抱歉，你没有权限访问该服务，请检查你的密钥是否有访问权限",
-    "InvalidProviderAPIKey": "{{provider}} API Key 不正确或为空，请检查 {{provider}} API Key 后重试",
-    "ProviderBizError": "请求 {{provider}} 服务出错，请根据以下信息排查或重试",
-    "NoOpenAIAPIKey": "OpenAI API Key 不正确或为空，请添加自定义 OpenAI API Key",
+    "InvalidProviderAPIKey": "灵境 API Key 不正确或为空，请检查 灵境 API Key 后重试",
+    "ProviderBizError": "请求 灵境 服务出错，请根据以下信息排查或重试",
+    "NoOpenAIAPIKey": "灵境 API Key 不正确或为空，请添加自定义 灵境 API Key",
     "InvalidVertexCredentials": "Vertex 鉴权未通过，请检查鉴权凭证后重试",
     "InvalidBedrockCredentials": "Bedrock 鉴权未通过，请检查 AccessKeyId/SecretAccessKey 后重试",
     "StreamChunkError": "流式请求的消息块解析错误，请检查当前 API 接口是否符合标准规范，或联系你的 API 供应商咨询",
@@ -100,7 +100,7 @@
     "InvalidOllamaArgs": "Ollama 配置不正确，请检查 Ollama 配置后重试",
     "OllamaBizError": "请求 Ollama 服务出错，请根据以下信息排查或重试",
     "OllamaServiceUnavailable": "Ollama 服务连接失败，请检查 Ollama 是否运行正常，或是否正确设置 Ollama 的跨域配置",
-    "AgentRuntimeError": "Lobe AI Runtime 执行出错，请根据以下信息排查或重试",
+    "AgentRuntimeError": "灵境 AI Runtime 执行出错，请根据以下信息排查或重试",
     "FreePlanLimit": "当前为免费用户，无法使用该功能，请升级到付费计划后继续使用",
     "SubscriptionPlanLimit": "您的订阅积分已用尽，无法使用该功能，请升级到更高计划，或配置自定义模型 API 后继续使用",
     "InvalidGithubToken": "Github PAT 不正确或为空，请检查 Github PAT 后重试",
@@ -113,10 +113,10 @@
     "responseError": "服务请求失败，请检查配置或重试"
   },
   "unlock": {
-    "addProxyUrl": "添加 OpenAI 代理地址（可选）",
+    "addProxyUrl": "添加 灵境 远程地址（可选）",
     "apiKey": {
-      "description": "输入你的 {{name}} API Key 即可开始会话",
-      "title": "使用自定义 {{name}} API Key"
+      "description": "输入你的 灵境 API Key 即可开始会话",
+      "title": "使用自定义 灵境 API Key"
     },
     "closeMessage": "关闭提示",
     "confirm": "确认并重试",
