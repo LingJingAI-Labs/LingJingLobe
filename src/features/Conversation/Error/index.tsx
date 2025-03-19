@@ -11,7 +11,6 @@ import { ChatErrorType, ErrorType } from '@/types/fetch';
 import { ChatMessage, ChatMessageError } from '@/types/message';
 
 import ClerkLogin from './ClerkLogin';
-import ErrorJsonViewer from './ErrorJsonViewer';
 import InvalidAPIKey from './InvalidAPIKey';
 import InvalidAccessCode from './InvalidAccessCode';
 import { ErrorActionContainer } from './style';
@@ -82,8 +81,12 @@ export const useErrorContent = (error: any) => {
 
 const ErrorMessageExtra = memo<{ data: ChatMessage }>(({ data }) => {
   const error = data.error as ChatMessageError;
-  if (!error?.type) return;
+  const errorContent = useErrorContent(error);
+  const Alert = dynamic(() => import('@lobehub/ui').then((mod) => mod.Alert), { ssr: false });
 
+  if (!error?.type) return null;
+
+  // 处理特殊错误类型
   switch (error.type) {
     case AgentRuntimeErrorType.OllamaBizError: {
       return <OllamaBizError {...data} />;
@@ -102,9 +105,7 @@ const ErrorMessageExtra = memo<{ data: ChatMessage }>(({ data }) => {
     }
 
     case AgentRuntimeErrorType.NoOpenAIAPIKey: {
-      {
-        return <InvalidAPIKey id={data.id} provider={data.error?.body?.provider} />;
-      }
+      return <InvalidAPIKey id={data.id} provider={data.error?.body?.provider} />;
     }
   }
 
@@ -112,7 +113,7 @@ const ErrorMessageExtra = memo<{ data: ChatMessage }>(({ data }) => {
     return <InvalidAPIKey id={data.id} provider={data.error?.body?.provider} />;
   }
 
-  return <ErrorJsonViewer error={data.error} id={data.id} />;
+  return <Alert {...errorContent} />;
 });
 
 export default memo<{ data: ChatMessage }>(({ data }) => (

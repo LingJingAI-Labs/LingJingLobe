@@ -91,7 +91,7 @@
     "QuotaLimitReached": "很抱歉，当前 Token 用量或请求次数已达该密钥的配额(quota)上限，请增加该密钥的配额或稍后再试",
     "PermissionDenied": "很抱歉，你没有权限访问该服务，请检查你的密钥是否有访问权限",
     "InvalidProviderAPIKey": "灵境 API Key 不正确或为空，请检查 灵境 API Key 后重试",
-    "ProviderBizError": "请求 灵境 服务出错，请根据以下信息排查或重试",
+    "ProviderBizError": "请求 灵境 服务出错，请点击重新生成或新开话题重试",
     "NoOpenAIAPIKey": "灵境 API Key 不正确或为空，请添加自定义 灵境 API Key",
     "InvalidVertexCredentials": "Vertex 鉴权未通过，请检查鉴权凭证后重试",
     "InvalidBedrockCredentials": "Bedrock 鉴权未通过，请检查 AccessKeyId/SecretAccessKey 后重试",
