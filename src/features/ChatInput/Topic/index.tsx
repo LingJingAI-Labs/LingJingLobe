@@ -48,8 +48,8 @@ const SaveTopic = memo<{ mobile?: boolean }>(({ mobile }) => {
             <HotKeys inverseTheme={false} keys={hotkeys} />
           </div>
         }
-      >
-        <Tooltip>
+        >
+        <Tooltip title={desc}>
           <ActionIcon
             aria-label={desc}
             icon={icon}
