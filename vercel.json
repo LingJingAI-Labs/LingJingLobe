@@ -3,7 +3,7 @@
   "installCommand": "bun install",
   "functions": {
     "src/app/*": {
-      "maxDuration": 90
+      "maxDuration": 120
     }
   }
 }
