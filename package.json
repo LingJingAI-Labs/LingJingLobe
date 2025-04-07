@@ -29,12 +29,12 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "next build",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 GENERATE_SOURCEMAP=false next build",
     "postbuild": "npm run build-sitemap && npm run build-migrate-db",
     "build-migrate-db": "bun run db:migrate",
     "build-sitemap": "tsx ./scripts/buildSitemapIndex/index.ts",
-    "build:analyze": "ANALYZE=true next build",
-    "build:docker": "DOCKER=true next build && npm run build-sitemap",
+    "build:analyze": "NODE_OPTIONS=--max-old-space-size=8192 GENERATE_SOURCEMAP=false ANALYZE=true next build",
+    "build:docker": "NODE_OPTIONS=--max-old-space-size=8192 GENERATE_SOURCEMAP=false DOCKER=true next build && npm run build-sitemap",
     "db:generate": "drizzle-kit generate && npm run db:generate-client",
     "db:generate-client": "tsx ./scripts/migrateClientDB/compile-migrations.ts",
     "db:migrate": "MIGRATION_DB=1 tsx ./scripts/migrateServerDB/index.ts",
@@ -337,6 +337,7 @@
       "next": "15.2.1",
       "@langchain/core": "0.2.36",
       "react": "19.0.0",
+      "react-dom": "19.0.0",
       "@octokit/core": "5.2.0"
     },
     "packageExtensions": {
@@ -353,6 +354,7 @@
     "next": "15.2.1",
     "@langchain/core": "0.2.36",
     "react": "19.0.0",
+    "react-dom": "19.0.0",
     "@octokit/core": "5.2.0"
   }
 }
