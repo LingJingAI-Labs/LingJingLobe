@@ -1,6 +1,7 @@
 import { POST as UniverseRoute } from '../[provider]/route';
 
 export const runtime = 'edge';
+export const maxDuration = 120;
 
 export const preferredRegion = [
   'arn1',
