@@ -2,10 +2,7 @@
   "buildCommand": "NODE_OPTIONS=--max-old-space-size=4096 bun run build",
   "installCommand": "bun install",
   "functions": {
-    "src/app/(backend)/**/*.ts": {
-      "maxDuration": 120
-    },
-    "src/app/(backend)/**/*.tsx": {
+    "src/app/(backend)/webapi/chat/openai/route.ts": {
       "maxDuration": 120
     }
   }

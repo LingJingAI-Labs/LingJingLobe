@@ -1,7 +1,18 @@
 import { POST as UniverseRoute } from '../[provider]/route';
 
 export const runtime = 'edge';
-export const maxDuration = 120;
+
+export const fetchCache = 'force-no-store';
+export const revalidate = 0;
+
+// Set max duration in the correct format for Next.js 15+
+export const config = {
+  api: {
+    bodyParser: false,
+    responseLimit: false,
+    maxDuration: 120,
+  },
+};
 
 export const preferredRegion = [
   'arn1',
