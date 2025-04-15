@@ -9,8 +9,8 @@ export const revalidate = 0;
 export const config = {
   api: {
     bodyParser: false,
-    responseLimit: false,
     maxDuration: 180,
+    responseLimit: false,
   },
 };
 
