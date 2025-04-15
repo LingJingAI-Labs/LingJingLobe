@@ -10,7 +10,7 @@ export const config = {
   api: {
     bodyParser: false,
     responseLimit: false,
-    maxDuration: 120,
+    maxDuration: 180,
   },
 };
 

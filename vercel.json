@@ -3,7 +3,7 @@
   "installCommand": "bun install",
   "functions": {
     "src/app/(backend)/webapi/chat/openai/route.ts": {
-      "maxDuration": 120
+      "maxDuration": 180
     }
   }
 }
